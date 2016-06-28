@@ -48,8 +48,8 @@ node default {
 #  path => "/etc/motd",
 #  content => "Smile, it makes people wonder!"
 #  }
-exec { 'cowsay_motd':
-  command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-  }
+exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
+  creates => '/etc/motd',
+    }
 }
 
