@@ -33,7 +33,6 @@ ini_setting { 'random ordering':
 # http://docs.puppetlabs.com/guides/language_guide.html#nodes for more on
 # node definitions.
 file { 'motd':
-  ensure => present,
   ensure => file,
   path => "/etc/motd",
   content => "Smile, it makes people wonder!"
