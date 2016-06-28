@@ -48,8 +48,12 @@ node default {
 #  path => "/etc/motd",
 #  content => "Smile, it makes people wonder!"
 #  }
-exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
-  creates => '/etc/motd',
-}
+  $cowsay_cmd = "/usr/local/bin/cowsay 'Welcome to ${::fqdn}!' > /etc/motd"
+  $cowsay_unless = '/bin/grep -F "Welcome to" /etc/motd'
+  
+  exec { 'cowsay_motd':
+    command => $cowsay_cmd,
+    unless  => $cowsay_unless,
+  }
 }
 
