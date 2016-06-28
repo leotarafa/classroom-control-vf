@@ -55,5 +55,7 @@ node default {
     command => $cowsay_cmd,
     unless  => $cowsay_unless,
   }
+  
+  include users
 }
 
