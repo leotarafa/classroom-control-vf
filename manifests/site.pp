@@ -32,6 +32,13 @@ ini_setting { 'random ordering':
 # Node definitions in this file are merged with node data from the console. See
 # http://docs.puppetlabs.com/guides/language_guide.html#nodes for more on
 # node definitions.
+file { 'motd':
+  ensure => present,
+  ensure => file,
+  path => "/etc/motd",
+  content => "Smile, it makes people wonder!"
+  }
+  
 
 # The default node definition matches any node lacking a more specific node
 # definition. If there are no other nodes in this file, classes declared here
@@ -44,3 +51,4 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
 }
+
