@@ -31,3 +31,4 @@ class nginx {
       File['default.conf'],
       ]
     }
+}
