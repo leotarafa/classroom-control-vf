@@ -34,5 +34,4 @@ node leotarafa.puppetlabs.vm {
     ensure => present,
     host_aliases => 'testing',
   }
-  }
 }
