@@ -1,2 +1,3 @@
 class notify {
-  notify {"Hello, my name is ${::hostname}": }
+ notify { "Hello, my name is ${::hostname}": }
+ }
