@@ -12,6 +12,10 @@ class nginx {
     path => '/etc/nginx/nginx.conf',
     source => 'puppet:///modules/nginx/nginx.conf'
     }
+  file { 'var/www':
+    ensure => directory,
+    path => '/var/www',
+    }
   file { 'index.html':
     ensure => file,
     path => '/var/www',
