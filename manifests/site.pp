@@ -21,6 +21,7 @@ node default {
   include skeleton
   include cowsay_motd
   include notify
+  }
 #Node definition for leotarafa.puppetlabs.vm
 node leotarafa.puppetlabs.vm {
   include users
@@ -32,5 +33,6 @@ node leotarafa.puppetlabs.vm {
     ip => '127.0.0.1',
     ensure => present,
     host_aliases => 'testing',
+  }
   }
 }
