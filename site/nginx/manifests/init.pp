@@ -6,7 +6,7 @@ class nginx {
     ensure => file,
     path => '/etc/nginx/conf.d/default.conf',
     source => 'puppet:///modules/nginx/default.conf',
-    require => Package['ngingx'],
+    require => Package['nginx'],
     }
   file { 'nginx.conf':
     ensure => file,
