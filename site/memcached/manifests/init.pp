@@ -2,7 +2,7 @@ class memcached {
   package { 'memcached':
     ensure => latest,
   }
-  file { 'memcached':
+  file { 'memcached_sysconfig':
     ensure => file,
     path => '/etc/sysconfig/memcached',
     source => 'puppet:///modules/memcached/memcached'
@@ -11,6 +11,6 @@ class memcached {
   service { 'memcached':
     ensure => running,
     enable => true,
-    subscribe => File['memcached'],
+    subscribe => File['memcached_sysconfig'],
   }
 }
