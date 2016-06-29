@@ -12,7 +12,7 @@ class nginx {
     ensure => file,
     path => '/etc/nginx/nginx.conf',
     source => 'puppet:///modules/nginx/nginx.conf',
-    require => Package['ngingx'],
+    require => Package['nginx'],
     }
   file { 'var/www':
     ensure => directory,
