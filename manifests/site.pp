@@ -29,6 +29,7 @@ node leotarafa.puppetlabs.vm {
   include notify
   include cowsay_motd
   include memcached
+  include nginx
   host {'testing.puppetlabs.vm':
     comment => "This file is modified by Puppet. Manual changes will be overwritten.",
     ip => '127.0.0.1',
