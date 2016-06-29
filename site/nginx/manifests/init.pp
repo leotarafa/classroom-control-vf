@@ -5,7 +5,7 @@ class nginx {
   file { 'default.conf':
     ensure => file,
     path => '/etc/nginx/conf.d/default.conf',
-    owner => 'root,
+    owner => 'root',
     group => 'root',
     mode => '0664',
     source => 'puppet:///modules/nginx/default.conf',
@@ -14,7 +14,7 @@ class nginx {
   file { 'nginx.conf':
     ensure => file,
     path => '/etc/nginx/nginx.conf',
-    owner => 'root,
+    owner => 'root',
     group => 'root',
     mode => '0664',
     source => 'puppet:///modules/nginx/nginx.conf',
@@ -23,14 +23,14 @@ class nginx {
   file { 'var/www':
     ensure => directory,
     path => '/var/www',
-    owner => 'root,
+    owner => 'root',
     group => 'root',
     mode => '0775',
     }
   file { 'index.html':
     ensure => file,
     path => '/var/www/index.html',
-    owner => 'root,
+    owner => 'root',
     group => 'root',
     mode => '0664',
     source => 'puppet:///modules/nginx/index.html'
