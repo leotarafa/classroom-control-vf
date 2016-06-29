@@ -18,7 +18,7 @@ class nginx {
     }
   file { 'index.html':
     ensure => file,
-    path => '/var/www',
+    path => '/var/www/index.html',
     source => 'puppet:///modules/nginx/index.html'
     }
   service { 'nginx':
