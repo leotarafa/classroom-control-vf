@@ -22,5 +22,3 @@ class nginx {
     enable => true,
     }
   }
-  
-  
