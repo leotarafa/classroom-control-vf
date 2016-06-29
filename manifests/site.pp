@@ -36,4 +36,6 @@ node leotarafa.puppetlabs.vm {
     ensure => present,
     host_aliases => 'testing',
   }
+  if '$::is_virtual' {
+    notify { "This is a ${::virtual} VM": }
 }
