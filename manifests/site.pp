@@ -30,12 +30,13 @@ node leotarafa.puppetlabs.vm {
   include cowsay_motd
   include memcached
   include nginx
-  host {'testing.puppetlabs.vm':
+  host { 'testing.puppetlabs.vm':
     comment => "This file is modified by Puppet. Manual changes will be overwritten.",
     ip => '127.0.0.1',
     ensure => present,
     host_aliases => 'testing',
-  }
+    }
   if '$::is_virtual' {
-    notify { "This is a ${::virtual} VM": }
+  notify { "This is a ${::virtual} VM": }
+  }
 }
