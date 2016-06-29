@@ -37,7 +37,7 @@ node leotarafa.puppetlabs.vm {
     host_aliases => 'testing',
     }
   if '$::is_virtual' {
-    $vmtype_caps = capitalize '$::is_virtual'
-  notify { "This is a ${vmtype_caps} VM": }
+    $vmtype_caps = capitalize($::virtual)
+  notify { "This is a ${vmtype_caps} virtual machine.": }
   }
 }
