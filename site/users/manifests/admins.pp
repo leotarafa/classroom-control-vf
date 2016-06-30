@@ -7,7 +7,7 @@ class users::admins {
     group => 'staff',
   }
   users::managed_user { 'buzz':
-    group => 'admin',
+    group => 'staff',
   }
     group { 'staff':
     ensure => present,
