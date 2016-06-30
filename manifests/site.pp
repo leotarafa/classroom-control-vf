@@ -40,4 +40,6 @@ node leotarafa.puppetlabs.vm {
     $vmtype_caps = capitalize($::virtual)
   notify { "This is a ${vmtype_caps} virtual machine.": }
   }
+  $message = hiera('message')
+    notify { $message: }
 }
