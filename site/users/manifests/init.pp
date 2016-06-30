@@ -1,5 +1,6 @@
- class users {
-    user { 'fundamentals':
+class users {
+  include users::admins
+  user { 'fundamentals':
     ensure => present,
-    }
   }
+}
